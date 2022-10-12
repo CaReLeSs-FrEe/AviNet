@@ -19,7 +19,7 @@ function App() {
               </h1>
               <p class="lead my-3">
                With 1000s of jobs available
-               you decide where you go 
+               you decide where you go! 
               </p>
               <p class="lead mb-0">
                 <a href="/" class="text-white fw-bold">
