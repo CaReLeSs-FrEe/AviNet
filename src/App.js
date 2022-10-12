@@ -18,9 +18,8 @@ function App() {
                 AVIATION JOBS AROUND THE WORLD!!!
               </h1>
               <p class="lead my-3">
-                Multiple lines of text that form the lede, informing new readers
-                quickly and efficiently about what’s most interesting in this
-                post’s contents.
+               With 1000s of jobs available
+               you decide where you go 
               </p>
               <p class="lead mb-0">
                 <a href="/" class="text-white fw-bold">
