@@ -191,7 +191,6 @@ const Profile = () => {
                   <div className="col-sm-12">
                     <Link
                       className="btn btn-info "
-                      target="__blank"
                       to={`/edit/${user._id}`}
                     >
                       Edit
