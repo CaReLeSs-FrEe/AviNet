@@ -147,37 +147,44 @@ const Profile = () => {
               <div className="card-body">
                 <div className="row">
                   <div className="col-sm-3">
-                    <h6 className="mb-0">Full Name</h6>
+                    <h6 className="mb-0">First Name</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">Kenneth Valdez</div>
+                  <div className="col-sm-9 text-secondary">{user.firstName}</div>
                 </div>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Last Name</h6>
+                  </div>
+                  <div className="col-sm-9 text-secondary">{user.lastName}</div>
+                </div>
+
 
                 <div className="row">
                   <div className="col-sm-3">
                     <h6 className="mb-0">Email</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">fip@jukmuh.al</div>
+                  <div className="col-sm-9 text-secondary">{user.email}</div>
                 </div>
 
                 <div className="row">
                   <div className="col-sm-3">
                     <h6 className="mb-0">Phone</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">(239) 816-9029</div>
+                  <div className="col-sm-9 text-secondary">{user.phone}</div>
                 </div>
 
                 <div className="row">
                   <div className="col-sm-3">
                     <h6 className="mb-0">Mobile</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">(320) 380-4539</div>
+                  <div className="col-sm-9 text-secondary">{user.mobile}</div>
                 </div>
                 <div className="row">
                   <div className="col-sm-3">
                     <h6 className="mb-0">Address</h6>
                   </div>
                   <div className="col-sm-9 text-secondary">
-                    Bay Area, San Francisco, CA
+                    {user.city} {user.state} {user.zip}
                   </div>
                 </div>
                 <div className="row">
@@ -185,7 +192,7 @@ const Profile = () => {
                     <Link
                       className="btn btn-info "
                       target="__blank"
-                      to="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills"
+                      to={`/edit/${user._id}`}
                     >
                       Edit
                     </Link>

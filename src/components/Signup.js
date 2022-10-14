@@ -10,6 +10,8 @@ function Signup() {
   const [state, setState] = useState({
     firstName: "",
     lastName: "",
+    phone: "",
+    mobile: "",
     city: "",
     state: "",
     zip: 0,
@@ -29,7 +31,7 @@ function Signup() {
     event.preventDefault();
     // TODO: show a loading modal when loading sign up.
     try {
-      const res = await axios.post("http://localhost:6969/auth/signup", state);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, state);
       console.log(res.data);
       navigate("/Login");
     } catch (e) {
@@ -142,6 +144,36 @@ function Signup() {
           aria-describedby="validationServer05Feedback"
           value={state.zip}
           name="zip"
+          onChange={updateState}
+          required
+        />
+      </div>
+      <div className="col-md-3">
+        <label htmlFor="validationServer04" className="form-label">
+          Phone
+        </label>
+        <input
+          type="text"
+          className="form-control "
+          id="validationServer03"
+          aria-describedby="validationServer03Feedback"
+          value={state.phone}
+          name="phone"
+          onChange={updateState}
+          required
+        />
+      </div>
+      <div className="col-md-3">
+        <label htmlFor="validationServer04" className="form-label">
+          Mobile
+        </label>
+        <input
+          type="text"
+          className="form-control "
+          id="validationServer03"
+          aria-describedby="validationServer03Feedback"
+          value={state.mobile}
+          name="mobile"
           onChange={updateState}
           required
         />

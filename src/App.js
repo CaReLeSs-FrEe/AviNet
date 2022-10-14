@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import EditProfile from "./components/EditProfile";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/SignUp" element={<Signup />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/edit/:userId" element={<EditProfile />} />
       </Routes>
     </div>
   );

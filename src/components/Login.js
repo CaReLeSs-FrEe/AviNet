@@ -20,7 +20,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post("http://localhost:6969/auth/login", state)
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, state)
       console.log(res.data.authToken)
       storeToken(res.data.authToken)
       const isAutheticated = await authenticateUser()

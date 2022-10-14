@@ -21,7 +21,7 @@ function AuthProvider({ children }) {
 
     if (storedToken) {
       try {
-        const response = await axios.get("http://localhost:6969/auth/verify", {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth/verify`, {
           headers: { authorization: `Bearer ${storedToken}` },
         });
         console.log('user', response.data)
