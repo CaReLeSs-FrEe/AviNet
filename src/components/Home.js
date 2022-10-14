@@ -12,7 +12,8 @@ function Home() {
               AVIATION JOBS AROUND THE WORLD!!!
             </h1>
             <p className="lead my-3">
-              With 1000s of companies needing personel. Jobs are available and you decide where you go!
+              With 1000s of companies needing personel. Jobs are available and
+              you decide where you go!
             </p>
             <p className="lead mb-0">
               <Link to="/" className="text-white fw-bold">
@@ -49,10 +50,12 @@ function Home() {
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>Search Contracts</title>
+                  <title>Contracts..</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    
+                  Search 
+                  for 
+                  Contracts
                   </text>
                 </svg>
               </div>
@@ -88,7 +91,9 @@ function Home() {
                   <title>Jobs</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Search for open positions
+                    Search 
+                    for open 
+                    positions
                   </text>
                 </svg>
               </div>
