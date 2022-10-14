@@ -2,10 +2,10 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 function Signup() {
-  const { register, handleSubmit } = useForm();
+  // const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
   const [state, setState] = useState({
     firstName: "",
@@ -26,6 +26,7 @@ function Signup() {
     });
   };
   const onSubmit = async (event) => {
+    event.preventDefault();
     // TODO: show a loading modal when loading sign up.
     try {
       const res = await axios.post("http://localhost:6969/auth/signup", state);
@@ -36,13 +37,12 @@ function Signup() {
     }
   };
   return (
-    <form className="row g-3" onSubmit={handleSubmit(onSubmit)}>
+    <form className="row g-3" onSubmit={onSubmit}>
       <div className="col-md-4">
         <label htmlFor="validationServer01" className="form-label">
           First name
         </label>
         <input
-          {...register("firstName", { required: true })}
           type="text"
           className="form-control "
           id="validationServer01"
@@ -57,7 +57,6 @@ function Signup() {
           Last name
         </label>
         <input
-          {...register("lastName", { required: true })}
           type="text"
           className="form-control "
           id="validationServer02"
@@ -76,7 +75,6 @@ function Signup() {
             @
           </span>
           <input
-            {...register("email", { required: true })}
             type="text"
             className="form-control "
             id="validationServerEmail"
@@ -93,7 +91,6 @@ function Signup() {
           Password
         </label>
         <input
-          {...register("password", { required: true })}
           type="text"
           className="form-control "
           id="validationServer03"
@@ -109,7 +106,6 @@ function Signup() {
           City
         </label>
         <input
-          {...register("city", { required: true })}
           type="text"
           className="form-control "
           id="validationServer03"
@@ -125,7 +121,6 @@ function Signup() {
           State
         </label>
         <input
-          {...register("state", { required: true })}
           type="text"
           className="form-control "
           id="validationServer03"
@@ -141,7 +136,6 @@ function Signup() {
           Zip
         </label>
         <input
-          {...register("zip", { required: true })}
           type="text"
           className="form-control "
           id="validationServer05"
@@ -157,7 +151,6 @@ function Signup() {
           Account Roll
         </label>
         <select
-          {...register("accountRoll", { required: true })}
           className="form-select "
           id="validationServer04"
           aria-describedby="validationServer04Feedback"

@@ -1,9 +1,11 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import { AuthContext } from "../context/auth.context";
 
 function Login() {
+  const { storeToken, authenticateUser } = useContext(AuthContext)
   const navigate = useNavigate();
   const [state, setState] = useState({
     email: "",
@@ -15,15 +17,17 @@ function Login() {
       [event.target.name]: event.target.value,
     });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    axios
-      .post("http://localhost:6969/auth/login", state)
-      .then((res) => {
-        console.log(res.data);
-        navigate("/Profile");
-      })
-      .catch((err) => console.log(err));
+    try {
+      const res = await axios.post("http://localhost:6969/auth/login", state)
+      console.log(res.data.authToken)
+      storeToken(res.data.authToken)
+      const isAutheticated = await authenticateUser()
+      if (isAutheticated) navigate("/Profile");
+    } catch (e) {
+      console.log('login error', e)
+    }
   };
   return (
     <form className="row g-3" onSubmit={handleSubmit}>

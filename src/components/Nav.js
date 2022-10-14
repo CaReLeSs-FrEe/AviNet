@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
 function Nav() {
-  const { isLoggedIn, user } = useContext(AuthContext);
+  const { isLoggedIn, logout } = useContext(AuthContext);
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="./">
+        <Link className="navbar-brand" to="/">
           AviNet
         </Link>
         <button
@@ -24,19 +24,35 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="./Home">
+              <Link className="nav-link active" aria-current="page" to="/Home">
                 Home
               </Link>
             </li>
+            {isLoggedIn && (
+              <>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="./Profile"
+                  >
+                    Profile
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <button onClick={logout}>LogOut</button>
+                </li>
+              </>
+            )}
             {!isLoggedIn && (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./Signup">
+                  <Link className="nav-link" to="/Signup">
                     SignUp
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./Login">
+                  <Link className="nav-link" to="/Login">
                     LogIn
                   </Link>
                 </li>

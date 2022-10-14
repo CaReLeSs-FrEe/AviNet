@@ -1,1 +1,7 @@
-[ignore][include][libs][lints][options][strict];
+[ignore]
+.*/node_modules/.*
+[include]
+[libs]
+flow-typed
+[options]
+all=true
