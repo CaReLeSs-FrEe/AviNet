@@ -12,11 +12,11 @@ function Home() {
               AVIATION JOBS AROUND THE WORLD!!!
             </h1>
             <p className="lead my-3">
-              With 1000s of jobs available you decide where you go!
+              With 1000s of companies needing personel. Jobs are available and you decide where you go!
             </p>
             <p className="lead mb-0">
               <Link to="/" className="text-white fw-bold">
-                Continue reading...
+                Search Companies...
               </Link>
             </p>
           </div>
@@ -26,7 +26,7 @@ function Home() {
             <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div className="col p-4 d-flex flex-column position-static">
                 <strong className="mb-0 d-inline-block mb-2 text-primary">
-                  Rashes Rashes
+                  Contracts WorldWide
                 </strong>
                 {/* <h3 className="mb-0">Featured post</h3> */}
                 <div className="mb-1 text-muted">Nov 12</div>
@@ -49,10 +49,10 @@ function Home() {
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>Placeholder</title>
+                  <title>Search Contracts</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
+                    
                   </text>
                 </svg>
               </div>
@@ -85,10 +85,10 @@ function Home() {
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>Placeholder</title>
+                  <title>Jobs</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
+                    Search for open positions
                   </text>
                 </svg>
               </div>
