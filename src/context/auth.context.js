@@ -3,6 +3,7 @@ import axios from "axios";
 import { token } from "morgan";
 
 const AuthContext = createContext()
+
 function AuthProvider({children}) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isLoading, setIsloading] = useState(false);
@@ -16,4 +17,14 @@ function AuthProvider({children}) {
             axios.get()
         } 
     }
+    return (
+        <AuthContext.Provider value={{ isLoggedIn, isLoading, user}}>
+            {{children}}
+        </AuthContext.Provider>
+    )
+}
+
+export {
+    AuthContext,
+    AuthProvider
 }

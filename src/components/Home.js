@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Home() {
 return (
 <div>
@@ -13,9 +16,9 @@ return (
                you decide where you go! 
               </p>
               <p className="lead mb-0">
-                <a href="/" className="text-white fw-bold">
+                <Link to="/" className="text-white fw-bold">
                   Continue reading...
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -32,9 +35,9 @@ return (
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content.
                   </p>
-                  <a href="/" className="stretched-link">
+                  <Link to="/" className="stretched-link">
                     Continue reading
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-auto d-none d-lg-block">
                   <svg
@@ -68,9 +71,9 @@ return (
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content.
                   </p>
-                  <a href="/" className="stretched-link">
+                  <Link to="/" className="stretched-link">
                     Continue reading
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-auto d-none d-lg-block">
                   <svg
