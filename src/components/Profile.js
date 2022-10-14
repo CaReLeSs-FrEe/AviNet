@@ -1,3 +1,4 @@
+// @flow
 function Profile() {
     return(
 <div className="container">
@@ -172,7 +173,5 @@ function Profile() {
 
         </div>
     </div>
-    </div>
-    )
-};
+    )};
 export default Profile

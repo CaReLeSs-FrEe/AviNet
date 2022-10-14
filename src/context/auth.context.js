@@ -11,7 +11,8 @@ function AuthProvider({children}) {
         localStorage.setItem("authToken", token)
     }
     const verifiedUser = () => {
-        const storedToken = localStorage.getItem("authToken") if(storedToken) {
+        const storedToken = localStorage.getItem("authToken"); 
+        if(storedToken) {
             axios.get()
         } 
     }
